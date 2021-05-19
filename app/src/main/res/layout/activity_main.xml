@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true">
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/divider_horizontal_dark"
+        android:layout_centerInParent="true"
+        android:layout_marginVertical="64dp"/>
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn=""
+        android:textOff=""
+        style="@style/IconButton"
+        android:drawableStart="@drawable/toggle_bg"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:id="@+id/topInputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/divider"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/border_set">
+
+        <EditText
+            android:id="@+id/topInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:inputType="numberDecimal|number|numberSigned"
+            android:textColor="@color/white"
+            android:selectAllOnFocus="true"
+            android:textSize="40sp"
+            android:text="0.0"
+            android:background="@null"
+            android:paddingHorizontal="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="°C"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottomInputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/border_set">
+
+        <EditText
+            android:id="@+id/bottomInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:selectAllOnFocus="true"
+            android:text="32"
+            android:enabled="false"
+            android:inputType="numberDecimal|number|numberSigned"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:background="@null"
+            android:paddingHorizontal="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="°F"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</RelativeLayout>
